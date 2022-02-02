@@ -1,6 +1,6 @@
 {
 	"sites": [{
-		"key": "骚火",
+		"key": "csp_xpath_猫群自维护专用源",
 		"name": "默认主页",
 		"type": 3,
 		"api": "csp_XPath",
