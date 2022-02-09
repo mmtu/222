@@ -1,183 +1,155 @@
 {
-  "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36",
-  "homeUrl": "https://gimytv.vip/",
+  "author": "Tangsan99999",
+  "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",
+  "homeUrl": "https://gimytv.com/",
   "dcVipFlag": "true",
+  "pCfgJs": "https://gimytv.com/static/js/playerconfig.js",
+  "pCfgJsR": "[\\W|\\S|.]*?MacPlayerConfig.player_list[\\W|\\S|.]*?=([\\W|\\S|.]*?),MacPlayerConfig.downer_list",
+  "dcShow2Vip": {},
   "dcPlayUrl": "true",
-  "cateNode": "//div[@class='stui-header__menu clearfix']/ul/li/a[contains(@href, 'html')]",
+  "cateNode": "//ul[@class='myui-header__menu']/li/a[contains(@href, 'browse')]",
   "cateName": "/text()",
   "cateId": "/@href",
-  "cateIdR": "/type/(\\w+).html",
+  "cateIdR": "/browse/(\\w+).html",
   "cateManual": {
-    "電影": "1",
-    "電視劇": "2",
-    "綜藝": "3",
-    "動漫": "4"
+    "电影": "movies",
+    "电视剧": "tvseries",
+    "综艺": "tv_show",
+    "动漫": "anime"
   },
-  "homeVodNode": "//ul[@class='stui-vodlist clearfix']/li/a",
+  "homeVodNode": "//ul[@class='myui-vodlist clearfix']/li/div/a",
   "homeVodName": "/@title",
   "homeVodId": "/@href",
-  "homeVodIdR": "/detail/(\\w+).html",
+  "homeVodIdR": "/(\\w+).html",
   "homeVodImg": "/@data-original",
   "homeVodMark": "/span[contains(@class, 'pic-text')]/text()",
-  "cateUrl": "https://gimytv.vip/list/id-{cateId}-area-{area}-by-{by}-page-{catePg}-year-{year}.html",
-  "cateVodNode": "//ul[@class='stui-vodlist clearfix']/li/a",
+  "cateUrl": "https://gimytv.com/genre/{cateId}-{area}-{year}-{catePg}/by/{by}.html",
+  "cateVodNode": "//ul[@class='myui-vodlist clearfix']/li/div/a",
   "cateVodName": "/@title",
   "cateVodId": "/@href",
-  "cateVodIdR": "/detail/(\\w+).html",
+  "cateVodIdR": "/(\\w+).html",
   "cateVodImg": "/@data-original",
   "cateVodMark": "/span[contains(@class, 'pic-text')]/text()",
-  "dtUrl": "https://gimytv.vip/detail/{vid}.html",
+  "dtUrl": "https://gimytv.com/{vid}.html",
   "dtNode": "//div[@class='container']",
-  "dtName": "//div[@class='stui-content__detail']/h3/text()",
+  "dtName": "//div[@class='myui-content__thumb']/a/@title",
   "dtNameR": "",
-  "dtImg": "//div[@class='stui-content__thumb']/a/img/@data-original",
+  "dtImg": "//div[@class='myui-content__thumb']/a/img/@data-original",
   "dtImgR": "\\S+(http\\S+)",
-  "dtCate": "//p[@class='data']/span[contains(text(), '類型')]/following-sibling::*/text()",
+  "dtCate": "//p[@class='data']/span[contains(text(), '分類')]/following-sibling::*/text()",
   "dtCateR": "",
   "dtYear": "//p[@class='data']/span[contains(text(), '年份')]/following-sibling::*/text()",
   "dtYearR": "",
-  "dtArea": "//p[@class='data']/span[contains(text(), '地區')]/following-sibling::*/text()",
+  "dtArea": "",
   "dtAreaR": "",
-  "dtMark": "",
+  "dtMark": "//p[@class='data']/span[contains(text(), '更新')]/following-sibling::*/text()",
   "dtMarkR": "",
   "dtActor": "//p[@class='data']/span[contains(text(), '主演')]/following-sibling::*/text()",
   "dtActorR": "",
   "dtDirector": "//p[@class='data']/span[contains(text(), '導演')]/following-sibling::*/text()",
   "dtDirectorR": "",
-  "dtDesc": "//div[contains(@class,'stui-content__desc col-pd clearfix')]/text()",
+  "dtDesc": "//div[contains(@class,'col-pd')]/p/text()",
   "dtDescR": "",
-  "dtFromNode": "//div[@class='stui-pannel clearfix']/div[@class='stui-pannel__head clearfix']/h3",
+  "dtFromNode": "//div[@class='myui-panel_hd']/div/h3[contains(text(),'線路')]",
   "dtFromName": "/text()",
-  "dtUrlNode": "//ul[contains(@class,'stui-content__playlist clearfix')]",
+  "dtUrlNode": "//ul[contains(@class,'myui-content__list')]",
   "dtUrlSubNode": "/li/a",
   "dtUrlId": "@href",
   "dtUrlIdR": "/(\\S+).html",
   "dtUrlName": "/text()",
   "dtUrlNameR": "",
-  "playUrl": "https://gimytv.vip/{playUrl}.html",
+  "playUrl": "https://gimytv.com/{playUrl}.html",
   "playUa": "",
-  "searchUrl": "https://gimytv.vip/search/-------------.html?wd={wd}&submit=",
-  "scVodNode": "//a[@class='stui-vodlist__thumb lazyload']",
-  "scVodName": "/@title",
-  "scVodId": "/@href",
-  "scVodIdR": "/(\\w+).html",
-  "scVodImg": "/@data-original",
-  "scVodMark": "/span/text()",
+  "searchUrl": "https://gimytv.com/index.php/ajax/suggest?mid=1&wd={wd}&limit=10",
+  "scVodNode": "json:list",
+  "scVodName": "name",
+  "scVodId": "id",
+  "scVodIdR": "",
+  "scVodImg": "pic",
+  "scVodMark": "",
   "filter": {
-    "1": [
+    "movies": [
       {
         "key": "cateId",
-        "name": "類型",
+        "name": "分类",
         "value": [
           {
             "n": "全部",
             "v": ""
           },
           {
+            "n": "劇情片",
+            "v": "drama"
+          },
+          {
             "n": "動作片",
-            "v": "6"
-          },
-          {
-            "n": "喜劇片",
-            "v": "7"
-          },
-          {
-            "n": "愛情",
-            "v": "8"
+            "v": "action"
           },
           {
             "n": "科幻片",
-            "v": "9"
+            "v": "scifi"
           },
           {
-            "n": "恐怖片",
-            "v": "10"
+            "n": "喜劇片",
+            "v": "comedymovie"
           },
           {
-            "n": "劇情片",
-            "v": "11"
+            "n": "愛情片",
+            "v": "romance"
           },
           {
             "n": "戰爭片",
-            "v": "12"
+            "v": "war"
           },
           {
-            "n": "動畫片",
-            "v": "26"
+            "n": "恐怖片",
+            "v": "horror"
+          },
+          {
+            "n": "動畫電影",
+            "v": "animation"
           }
         ]
       },
       {
         "key": "area",
-        "name": "地區",
+        "name": "地区",
         "value": [
           {
             "n": "全部",
             "v": ""
-          },
-          {
-            "n": "大陸",
-            "v": "大陸"
-          },
-          {
-            "n": "香港",
-            "v": "香港"
-          },
-          {
-            "n": "台灣",
-            "v": "台灣"
           },
           {
             "n": "美國",
             "v": "美國"
           },
           {
-            "n": "法國",
-            "v": "法國"
+            "n": "歐美",
+            "v": "歐美"
           },
           {
-            "n": "英國",
-            "v": "英國"
+            "n": "大陸",
+            "v": "大陸"
           },
           {
-            "n": "日本",
-            "v": "日本"
+            "n": "中國大陸",
+            "v": "中國大陸"
           },
           {
             "n": "韓國",
             "v": "韓國"
           },
           {
-            "n": "德國",
-            "v": "德國"
+            "n": "香港",
+            "v": "香港"
           },
           {
-            "n": "泰國",
-            "v": "泰國"
+            "n": "日本",
+            "v": "日本"
           },
           {
-            "n": "印度",
-            "v": "印度"
-          },
-          {
-            "n": "澳洲",
-            "v": "澳洲"
-          },
-          {
-            "n": "意大利",
-            "v": "意大利"
-          },
-          {
-            "n": "西班牙",
-            "v": "西班牙"
-          },
-          {
-            "n": "加拿大",
-            "v": "加拿大"
-          },
-          {
-            "n": "其他",
-            "v": "其他"
+            "n": "英國",
+            "v": "英國"
           }
         ]
       },
@@ -188,10 +160,6 @@
           {
             "n": "全部",
             "v": ""
-          },
-          {
-            "n": "2022",
-            "v": "2022"
           },
           {
             "n": "2021",
@@ -232,62 +200,32 @@
           {
             "n": "2012",
             "v": "2012"
+          }
+        ]
+      },
+      {
+        "key": "by",
+        "name": "排序",
+        "value": [
+          {
+            "n": "按更新",
+            "v": "time"
           },
           {
-            "n": "2011",
-            "v": "2011"
+            "n": "周人气",
+            "v": "hits_week"
           },
           {
-            "n": "2010",
-            "v": "2010"
-          },
-          {
-            "n": "2009",
-            "v": "2009"
-          },
-          {
-            "n": "2008",
-            "v": "2008"
-          },
-          {
-            "n": "2007",
-            "v": "2007"
-          },
-          {
-            "n": "2006",
-            "v": "2006"
-          },
-          {
-            "n": "2005",
-            "v": "2005"
-          },
-          {
-            "n": "2004",
-            "v": "2004"
-          },
-          {
-            "n": "2003",
-            "v": "2003"
-          },
-          {
-            "n": "2002",
-            "v": "2002"
-          },
-          {
-            "n": "2001",
-            "v": "2001"
-          },
-          {
-            "n": "2000",
-            "v": "2000"
+            "n": "月人气",
+            "v": "hits_month"
           }
         ]
       }
     ],
-    "2": [
+    "tvseries": [
       {
         "key": "cateId",
-        "name": "類型",
+        "name": "分类",
         "value": [
           {
             "n": "全部",
@@ -295,101 +233,35 @@
           },
           {
             "n": "陸劇",
-            "v": "13"
-          },
-          {
-            "n": "台劇",
-            "v": "15"
-          },
-          {
-            "n": "日劇",
-            "v": "16"
+            "v": "cn"
           },
           {
             "n": "韓劇",
-            "v": "20"
+            "v": "kr"
           },
           {
             "n": "美劇",
-            "v": "21"
+            "v": "us"
+          },
+          {
+            "n": "日劇",
+            "v": "jp"
+          },
+          {
+            "n": "台劇",
+            "v": "tw"
           },
           {
             "n": "港劇",
-            "v": "14"
+            "v": "hks"
           },
           {
-            "n": "泰劇",
-            "v": "25"
-          }
-        ]
-      },
-      {
-        "key": "area",
-        "name": "地區",
-        "value": [
-          {
-            "n": "全部",
-            "v": ""
+            "n": "海外劇",
+            "v": "ot"
           },
           {
-            "n": "大陸",
-            "v": "大陸"
-          },
-          {
-            "n": "香港",
-            "v": "香港"
-          },
-          {
-            "n": "台灣",
-            "v": "台灣"
-          },
-          {
-            "n": "美國",
-            "v": "美國"
-          },
-          {
-            "n": "法國",
-            "v": "法國"
-          },
-          {
-            "n": "英國",
-            "v": "英國"
-          },
-          {
-            "n": "日本",
-            "v": "日本"
-          },
-          {
-            "n": "韓國",
-            "v": "韓國"
-          },
-          {
-            "n": "德國",
-            "v": "德國"
-          },
-          {
-            "n": "泰國",
-            "v": "泰國"
-          },
-          {
-            "n": "印度",
-            "v": "印度"
-          },
-          {
-            "n": "意大利",
-            "v": "意大利"
-          },
-          {
-            "n": "西班牙",
-            "v": "西班牙"
-          },
-          {
-            "n": "加拿大",
-            "v": "加拿大"
-          },
-          {
-            "n": "其他",
-            "v": "其他"
+            "n": "紀錄片",
+            "v": "documentary"
           }
         ]
       },
@@ -400,10 +272,6 @@
           {
             "n": "全部",
             "v": ""
-          },
-          {
-            "n": "2022",
-            "v": "2022"
           },
           {
             "n": "2021",
@@ -444,236 +312,32 @@
           {
             "n": "2012",
             "v": "2012"
-          },
-          {
-            "n": "2011",
-            "v": "2011"
-          },
-          {
-            "n": "2010",
-            "v": "2010"
-          },
-          {
-            "n": "2009",
-            "v": "2009"
-          },
-          {
-            "n": "2008",
-            "v": "2008"
-          },
-          {
-            "n": "2007",
-            "v": "2007"
-          },
-          {
-            "n": "2006",
-            "v": "2006"
-          },
-          {
-            "n": "2005",
-            "v": "2005"
-          },
-          {
-            "n": "2004",
-            "v": "2004"
-          },
-          {
-            "n": "2003",
-            "v": "2003"
-          },
-          {
-            "n": "2002",
-            "v": "2002"
-          },
-          {
-            "n": "2001",
-            "v": "2001"
-          },
-          {
-            "n": "2000",
-            "v": "2000"
-          }
-        ]
-      }
-    ],
-    "3": [
-      {
-        "key": "area",
-        "name": "地區",
-        "value": [
-          {
-            "n": "全部",
-            "v": ""
-          },
-          {
-            "n": "大陸",
-            "v": "大陸"
-          },
-          {
-            "n": "韓國",
-            "v": "韓國"
-          },
-          {
-            "n": "台灣",
-            "v": "台灣"
-          },
-          {
-            "n": "日本",
-            "v": "日本"
-          },
-          {
-            "n": "香港",
-            "v": "香港"
-          },
-          {
-            "n": "美國",
-            "v": "美國"
-          },
-          {
-            "n": "法國",
-            "v": "法國"
-          },
-          {
-            "n": "英國",
-            "v": "英國"
-          },
-          {
-            "n": "德國",
-            "v": "德國"
-          },
-          {
-            "n": "泰國",
-            "v": "泰國"
-          },
-          {
-            "n": "印度",
-            "v": "印度"
-          },
-          {
-            "n": "意大利",
-            "v": "意大利"
-          },
-          {
-            "n": "西班牙",
-            "v": "西班牙"
-          },
-          {
-            "n": "加拿大",
-            "v": "加拿大"
-          },
-          {
-            "n": "其他",
-            "v": "其他"
           }
         ]
       },
       {
-        "key": "year",
-        "name": "年份",
+        "key": "by",
+        "name": "排序",
         "value": [
           {
-            "n": "全部",
-            "v": ""
+            "n": "按更新",
+            "v": "time"
           },
           {
-            "n": "2022",
-            "v": "2022"
+            "n": "周人气",
+            "v": "hits_week"
           },
           {
-            "n": "2021",
-            "v": "2021"
-          },
-          {
-            "n": "2020",
-            "v": "2020"
-          },
-          {
-            "n": "2019",
-            "v": "2019"
-          },
-          {
-            "n": "2018",
-            "v": "2018"
-          },
-          {
-            "n": "2017",
-            "v": "2017"
-          },
-          {
-            "n": "2016",
-            "v": "2016"
-          },
-          {
-            "n": "2015",
-            "v": "2015"
-          },
-          {
-            "n": "2014",
-            "v": "2014"
-          },
-          {
-            "n": "2013",
-            "v": "2013"
-          },
-          {
-            "n": "2012",
-            "v": "2012"
-          },
-          {
-            "n": "2011",
-            "v": "2011"
-          },
-          {
-            "n": "2010",
-            "v": "2010"
-          },
-          {
-            "n": "2009",
-            "v": "2009"
-          },
-          {
-            "n": "2008",
-            "v": "2008"
-          },
-          {
-            "n": "2007",
-            "v": "2007"
-          },
-          {
-            "n": "2006",
-            "v": "2006"
-          },
-          {
-            "n": "2005",
-            "v": "2005"
-          },
-          {
-            "n": "2004",
-            "v": "2004"
-          },
-          {
-            "n": "2003",
-            "v": "2003"
-          },
-          {
-            "n": "2002",
-            "v": "2002"
-          },
-          {
-            "n": "2001",
-            "v": "2001"
-          },
-          {
-            "n": "2000",
-            "v": "2000"
+            "n": "月人气",
+            "v": "hits_month"
           }
         ]
       }
     ],
-    "4": [
+    "anime": [
       {
         "key": "area",
-        "name": "地區",
+        "name": "地区",
         "value": [
           {
             "n": "全部",
@@ -684,40 +348,24 @@
             "v": "日本"
           },
           {
-            "n": "大陸",
-            "v": "大陸"
-          },
-          {
             "n": "美國",
             "v": "美國"
-          },
-          {
-            "n": "台灣",
-            "v": "台灣"
-          },
-          {
-            "n": "韓國",
-            "v": "韓國"
-          },
-          {
-            "n": "香港",
-            "v": "香港"
-          },
-          {
-            "n": "英國",
-            "v": "英國"
           },
           {
             "n": "歐美",
             "v": "歐美"
           },
           {
-            "n": "俄羅斯",
-            "v": "俄羅斯"
+            "n": "大陸",
+            "v": "大陸"
           },
           {
-            "n": "其他",
-            "v": "其他"
+            "n": "臺灣",
+            "v": "臺灣"
+          },
+          {
+            "n": "香港",
+            "v": "香港"
           }
         ]
       },
@@ -728,10 +376,6 @@
           {
             "n": "全部",
             "v": ""
-          },
-          {
-            "n": "2022",
-            "v": "2022"
           },
           {
             "n": "2021",
@@ -772,54 +416,150 @@
           {
             "n": "2012",
             "v": "2012"
+          }
+        ]
+      },
+      {
+        "key": "by",
+        "name": "排序",
+        "value": [
+          {
+            "n": "按更新",
+            "v": "time"
           },
           {
-            "n": "2011",
-            "v": "2011"
+            "n": "周人气",
+            "v": "hits_week"
           },
           {
-            "n": "2010",
-            "v": "2010"
+            "n": "月人气",
+            "v": "hits_month"
+          }
+        ]
+      }
+    ],
+    "tv_show": [
+      {
+        "key": "cateId",
+        "name": "分类",
+        "value": [
+          {
+            "n": "全部",
+            "v": ""
           },
           {
-            "n": "2009",
-            "v": "2009"
+            "n": "纪录片",
+            "v": "28"
+          }
+        ]
+      },
+      {
+        "key": "area",
+        "name": "地区",
+        "value": [
+          {
+            "n": "全部",
+            "v": ""
           },
           {
-            "n": "2008",
-            "v": "2008"
+            "n": "大陸",
+            "v": "大陸"
           },
           {
-            "n": "2007",
-            "v": "2007"
+            "n": "中國大陸",
+            "v": "中國大陸"
           },
           {
-            "n": "2006",
-            "v": "2006"
+            "n": "韓國",
+            "v": "韓國"
           },
           {
-            "n": "2005",
-            "v": "2005"
+            "n": "臺灣",
+            "v": "臺灣"
           },
           {
-            "n": "2004",
-            "v": "2004"
+            "n": "美國",
+            "v": "美國"
           },
           {
-            "n": "2003",
-            "v": "2003"
+            "n": "歐美",
+            "v": "歐美"
           },
           {
-            "n": "2002",
-            "v": "2002"
+            "n": "日本",
+            "v": "日本"
           },
           {
-            "n": "2001",
-            "v": "2001"
+            "n": "香港",
+            "v": "香港"
+          }
+        ]
+      },
+      {
+        "key": "year",
+        "name": "年份",
+        "value": [
+          {
+            "n": "全部",
+            "v": ""
           },
           {
-            "n": "2000",
-            "v": "2000"
+            "n": "2021",
+            "v": "2021"
+          },
+          {
+            "n": "2020",
+            "v": "2020"
+          },
+          {
+            "n": "2019",
+            "v": "2019"
+          },
+          {
+            "n": "2018",
+            "v": "2018"
+          },
+          {
+            "n": "2017",
+            "v": "2017"
+          },
+          {
+            "n": "2016",
+            "v": "2016"
+          },
+          {
+            "n": "2015",
+            "v": "2015"
+          },
+          {
+            "n": "2014",
+            "v": "2014"
+          },
+          {
+            "n": "2013",
+            "v": "2013"
+          },
+          {
+            "n": "2012",
+            "v": "2012"
+          }
+        ]
+      },
+      {
+        "key": "by",
+        "name": "排序",
+        "value": [
+          {
+            "n": "按更新",
+            "v": "time"
+          },
+          {
+            "n": "周人气",
+            "v": "hits_week"
+          },
+          {
+            "n": "月人气",
+            "v": "hits_month"
           }
         ]
       }
